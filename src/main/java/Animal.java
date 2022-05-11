@@ -1,3 +1,3 @@
-public interface Animal<F> {
+public interface Animal<F extends Food> {
     void eat(F food);
 }
