@@ -6,9 +6,14 @@ public class Predator implements Animal<MeatFood>, MeatFood {
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void eat(MeatFood food) {
         if (!food.getClass().equals(this.getClass())) {
-            System.out.println(name + " eating " + food);
+            System.out.println(name + " eating " + food.getName());
         } else {
             System.out.println(name + " doesn't eat his own kind");
         }

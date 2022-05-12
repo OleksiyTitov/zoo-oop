@@ -11,6 +11,6 @@ public class Herbivorous implements Animal<PlantFood>, MeatFood {
 
     @Override
     public void eat(PlantFood food) {
-        System.out.println(name + " eating " + food);
+        System.out.println(name + " eating " + food.getName());
     }
 }
