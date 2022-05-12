@@ -1,4 +1,4 @@
-public class Herbivorous implements Animal<Plant>, Food {
+public class Herbivorous implements Animal<PlantFood>, MeatFood {
     private String name;
 
     public Herbivorous(String name) {
@@ -10,7 +10,7 @@ public class Herbivorous implements Animal<Plant>, Food {
     }
 
     @Override
-    public void eat(Plant food) {
+    public void eat(PlantFood food) {
         System.out.println(name + " eating " + food);
     }
 }

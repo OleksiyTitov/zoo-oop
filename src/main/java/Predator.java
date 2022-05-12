@@ -1,4 +1,4 @@
-public class Predator implements Animal<Herbivorous> {
+public class Predator implements Animal<MeatFood>, MeatFood {
     private String name;
 
     public Predator(String name) {
@@ -6,7 +6,11 @@ public class Predator implements Animal<Herbivorous> {
     }
 
     @Override
-    public void eat(Herbivorous food) {
-        System.out.println(name + " eating " + food);
+    public void eat(MeatFood food) {
+        if (!food.getClass().equals(this.getClass())) {
+            System.out.println(name + " eating " + food);
+        } else {
+            System.out.println(name + " doesn't eat his own kind");
+        }
     }
 }

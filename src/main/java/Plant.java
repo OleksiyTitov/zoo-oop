@@ -1,4 +1,4 @@
-public class Plant implements Food {
+public class Plant implements PlantFood {
     private String name;
 
     public Plant(String name) {
